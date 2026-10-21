@@ -1,6 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8" %>
-
+         pageEncoding="UTF-8" %>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -62,23 +61,28 @@
 </head>
 
 <body>
-    <div class="login-box">
-        <h1>Connexion</h1>
+<div class="login-box">
+    <h1>Connexion</h1>
 
-        <% if ("error".equals(request.getParameter("status"))) { %>
-            <p class="message">Login ou mot de passe incorrect.</p>
-        <% } %>
+    <% if ("error".equals(request.getParameter("status"))) { %>
+    <p class="message">
+        Login ou mot de passe incorrect.
+    </p>
+    <% } %>
 
-        <form action="login" method="post">
-            <label for="login">Login :</label>
-            <input type="text" id="login" name="login" required>
+    <form action="${pageContext.request.contextPath}/login"
+          method="post">
 
-            <label for="password">Mot de passe :</label>
-            <input type="password" id="password"
-                   name="password" required>
+        <label for="login">Login :</label>
+        <input type="text" id="login" name="login" required>
 
-            <button type="submit">Se connecter</button>
-        </form>
-    </div>
+        <label for="password">Mot de passe :</label>
+        <input type="password" id="password"
+               name="password" required>
+
+        <button type="submit">Se connecter</button>
+    </form>
+</div>
 </body>
 </html>
+```
