@@ -80,6 +80,12 @@
         <input type="password" id="password"
                name="password" required>
 
+<label for="version">Version à tester :</label>
+<select id="version" name="version">
+    <option value="secure" selected>Version sécurisée</option>
+    <option value="vulnerable">Version vulnérable</option>
+</select>
+
         <button type="submit">Se connecter</button>
     </form>
 </div>
